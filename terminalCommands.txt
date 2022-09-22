@@ -21,3 +21,14 @@ docker push leporoni/k8s-tutorial
 kubectl apply -f k8s/pod.yaml
 
 kubectl get pods
+
+kubectl port-forward pod/webserver 8080:8080
+
+kubectl delete pod webserver
+
+kubectl apply -f k8s/replicaset.yaml
+
+kubectl get replicaset
+
+
+

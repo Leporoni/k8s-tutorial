@@ -1,5 +1,15 @@
+kind create cluster --name=k8s-master
+
+kubectl cluster-info --context kind-k8s-master
+
+kubectl get nodes
+
 go mod init webserver
 
 go run main.go
 
 docker build -t leporoni/k8s-tutorial .
+
+docker run --rm -p 8080:8080 leporoni/k8s-tutorial
+
+docker push leporoni/k8s-tutorial

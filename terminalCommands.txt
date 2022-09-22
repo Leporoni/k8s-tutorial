@@ -12,4 +12,8 @@ docker build -t leporoni/k8s-tutorial .
 
 docker run --rm -p 8080:8080 leporoni/k8s-tutorial
 
+docker login -u leporoni
+
+dockerhub auth token 
+
 docker push leporoni/k8s-tutorial
